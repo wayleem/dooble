@@ -11,5 +11,7 @@ declare namespace App {
 declare interface Product {
   id: string,
   name: string,
-  price: number
+  price: number,
+  themes: string[]
+  href: string,
 }

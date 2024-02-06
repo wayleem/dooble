@@ -2,7 +2,11 @@
     {
       id: '1',
       name: 'tee',
-      price: 12
+      price: 10.99,
+      href: '/store/tee1',
+      themes: [
+        "white", "black", "coffee"
+      ]
     }
   ]
 
