@@ -1,18 +1,5 @@
-<script>
-	const routes = [
-		{
-			href: '/',
-			label: 'Home'
-		},
-		{
-			href: '/store',
-			label: 'Store'
-		},
-		{
-			href: '/support',
-			label: 'Support'
-		}
-	];
+<script lang="ts">
+	import routes from './routes';
 </script>
 
 <div
