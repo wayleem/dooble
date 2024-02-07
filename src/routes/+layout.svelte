@@ -4,9 +4,9 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
 </script>
 
-<AppShell>
-	<svelte:fragment slot="header"><NavBar /></svelte:fragment>
-  <div class="h-screen bg-slate-100">
-	  <slot />
-  </div>
-</AppShell>
+<div class="bg-white">
+	<NavBar />
+	<div class="h-screen bg-secondary-50">
+		<slot />
+	</div>
+</div>

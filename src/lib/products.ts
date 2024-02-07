@@ -54,7 +54,65 @@ const products: Product[] = [
     ['S', 'M', 'L'],
     ['white', 'black', 'sea', 'space'],
     priceOverrides
-  )
+  ),
+
+  initProduct(
+    '3',
+    'tee3',
+    10.99,
+    'tee3',
+    ['S', 'M', 'L'],
+    ['white', 'black'],
+    priceOverrides
+  ),
+
+  initProduct(
+    '4',
+    'tee4',
+    10.99,
+    'tee4',
+    ['S', 'M', 'L'],
+    ['white', 'sea', 'space'],
+    priceOverrides
+  ),
+
+  initProduct(
+    '5',
+    'tee5',
+    10.99,
+    'tee5',
+    ['S', 'M', 'L'],
+    ['white', 'black', 'space'],
+    priceOverrides
+  ),
+
+  initProduct(
+    '6',
+    'tee7',
+    10.99,
+    'tee6',
+    ['S', 'M', 'L'],
+    ['white', 'black', 'sea', 'space'],
+    priceOverrides
+  ),
+  initProduct(
+    '7',
+    'tee7',
+    10.99,
+    'tee7',
+    ['S', 'M', 'L'],
+    ['white', 'black', 'sea', 'space'],
+    priceOverrides
+  ),
+  initProduct(
+    '8',
+    'tee8',
+    10.99,
+    'tee8',
+    ['S', 'M', 'L'],
+    ['white', 'black', 'sea', 'space'],
+    priceOverrides
+  ),
 ];
 
 export default products;
