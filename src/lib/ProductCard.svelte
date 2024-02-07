@@ -1,5 +1,12 @@
 <script lang="ts">
-	export let link: string, name: string, price: number, themes: string[];
+	export let link: string, name: string, price: number, variations: Variation[];
+
+  let theme_set = new Set<string>();
+  variations.forEach(v => {
+    theme_set.add(v.theme);
+  });
+  let themes: string[] = Array.from(theme_set);
+
 	const color_keys: Record<string, string> = {
 		white: 'bg-white shadow-slate-200',
 		black: 'bg-black',

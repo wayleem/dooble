@@ -13,7 +13,7 @@ declare interface Product {
   name: string,
   price: number,
   variations: Variation[]
-  href: string,
+  slug: string,
 }
 
 declare interface Variation {
