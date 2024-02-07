@@ -25,13 +25,7 @@
 </script>
 
 <div
-<<<<<<< Updated upstream
   class="navbar sticky top-0 flex flex-col pb-16 pt-4 text-black shadow justify-center items-center space-y-6 font-header backdrop-blur-sm {offscreen ? 'offscreen' : ''}"
-=======
-	class="sticky top-0 flex flex-col pb-16 pt-4 text-black shadow justify-center items-center space-y-6 font-header backdrop-blur-sm {offscreen
-		? 'offscreen'
-		: ''}"
->>>>>>> Stashed changes
 >
 	<h1 class="text-6xl">Dooble</h1>
 	<div class="flex space-x-10">
