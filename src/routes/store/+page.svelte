@@ -3,7 +3,8 @@
 	import ProductCard from '$lib/ProductCard.svelte';
 </script>
 
-<div class="bg-white grid gap-4 p-10">
+<div class="flex w-screen bg-white justify-center items-center">
+<div class="grid grid-cols-2 gap-4 p-10">
 	{#each products as product}
 		<ProductCard
 			link={`/store/${product.slug}`}
@@ -13,3 +14,4 @@
 		/>
 	{/each}
 </div>
+    </div>
