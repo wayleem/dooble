@@ -12,6 +12,18 @@ declare interface Product {
   id: string,
   name: string,
   price: number,
-  themes: string[]
+  variations: Variation[]
   href: string,
+}
+
+declare interface Variation {
+  sku: string,
+  size: string,
+  theme: string,
+  price: number
+}
+
+declare interface CartItem {
+  sku: string,
+  quantity: number,
 }
