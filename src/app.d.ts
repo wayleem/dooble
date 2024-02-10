@@ -21,6 +21,7 @@ declare interface Variation {
   size: string,
   theme: string,
   price: number
+  img: string,
 }
 
 declare interface CartItem {

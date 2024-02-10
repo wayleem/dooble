@@ -1,24 +1,32 @@
+type ThemeImage = {
+  theme: string;
+  img: string;
+};
+
 function initProduct(
   id: string,
   name: string,
   basePrice: number,
   slug: string,
   sizes: string[],
-  themes: string[],
-  priceOverrides?: Map<string, number> 
+  themeImages: ThemeImage[],
+  priceOverrides?: Map<string, number>
 ): Product {
   const variations: Variation[] = [];
 
-  sizes.forEach(size => {
-    themes.forEach(theme => {
+  // Iterate through each theme first
+  themeImages.forEach(({ theme, img }) => {
+    // Then iterate through sizes for each theme
+    sizes.forEach(size => {
       const sku = `${id}-${size}-${theme}`;
-      const price = priceOverrides?.get(sku) || basePrice; // override price if exists, else base price
+      const price = priceOverrides?.get(sku) || basePrice;
 
       variations.push({
         sku: sku,
         size: size,
         theme: theme,
-        price: price
+        price: price,
+        img: img, // Use the img from the ThemeImage object
       });
     });
   });
@@ -28,7 +36,7 @@ function initProduct(
     name: name,
     price: basePrice,
     slug: slug,
-    variations: variations
+    variations: variations,
   };
 }
 
@@ -39,78 +47,38 @@ const priceOverrides = new Map<string, number>([
 const products: Product[] = [
   initProduct(
     '1',
-    'tee',
+    'cat',
     10.99,
     'tee1',
     ['S', 'M', 'L'],
-    ['white', 'black', 'sea', 'space'],
+    [
+      { theme: 'white', img: '/img/placeholdertee.png' },
+      { theme: 'black', img: '/img/placeholdertee.png' },
+    ],
     priceOverrides
   ),
   initProduct(
     '2',
-    'tee2',
+    'dog',
     10.99,
     'tee2',
     ['S', 'M', 'L'],
-    ['white', 'black', 'sea', 'space'],
+    [
+      { theme: 'white', img: '/img/placeholdertee.png' },
+      { theme: 'black', img: '/img/placeholdertee.png' },
+    ],
     priceOverrides
   ),
-
   initProduct(
     '3',
-    'tee3',
+    'bird',
     10.99,
     'tee3',
     ['S', 'M', 'L'],
-    ['white', 'black'],
-    priceOverrides
-  ),
-
-  initProduct(
-    '4',
-    'tee4',
-    10.99,
-    'tee4',
-    ['S', 'M', 'L'],
-    ['white', 'sea', 'space'],
-    priceOverrides
-  ),
-
-  initProduct(
-    '5',
-    'tee5',
-    10.99,
-    'tee5',
-    ['S', 'M', 'L'],
-    ['white', 'black', 'space'],
-    priceOverrides
-  ),
-
-  initProduct(
-    '6',
-    'tee7',
-    10.99,
-    'tee6',
-    ['S', 'M', 'L'],
-    ['white', 'black', 'sea', 'space'],
-    priceOverrides
-  ),
-  initProduct(
-    '7',
-    'tee7',
-    10.99,
-    'tee7',
-    ['S', 'M', 'L'],
-    ['white', 'black', 'sea', 'space'],
-    priceOverrides
-  ),
-  initProduct(
-    '8',
-    'tee8',
-    10.99,
-    'tee8',
-    ['S', 'M', 'L'],
-    ['white', 'black', 'sea', 'space'],
+    [
+      { theme: 'white', img: '/img/placeholdertee.png' },
+      { theme: 'black', img: '/img/placeholdertee.png' },
+    ],
     priceOverrides
   ),
 ];
