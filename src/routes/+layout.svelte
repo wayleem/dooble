@@ -4,9 +4,9 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
 </script>
 
-<div class="bg-white">
+<div class="h-full w-full bg-neutral-100">
 	<NavBar />
-	<div class="h-screen bg-secondary-50">
+	<div>
 		<slot />
 	</div>
 </div>
