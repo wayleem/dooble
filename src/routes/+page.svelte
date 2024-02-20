@@ -1,15 +1,9 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script>
+	import NavBar from '$lib/NavBar.svelte';
+</script>
 
-<div class="flex bg-white text-black justify-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
+<div class="flex flex-col">
+	<div class="h-[32rem] overflow-hidden">
+		<img class="h-full w-full object-cover" alt="banner" src="/img/home-banner-1.jpg" />
 	</div>
 </div>
