@@ -1,5 +1,18 @@
 <script lang="ts">
-	import routes from './routes';
+	const routes = [
+		{
+			href: '/',
+			label: 'Dooble'
+		},
+		{
+			href: '/store',
+			label: 'store'
+		},
+		{
+			href: '/support',
+			label: 'support'
+		}
+	];
 </script>
 
 <div
