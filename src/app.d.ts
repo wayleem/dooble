@@ -25,6 +25,6 @@ declare interface Variation {
 }
 
 declare interface CartItem {
-  sku: string,
+  product: Variation
   quantity: number,
 }
