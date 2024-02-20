@@ -8,8 +8,8 @@
 	let themes: string[] = Array.from(theme_set);
 
 	const color_keys: Record<string, string> = {
-		white: 'bg-white shadow-slate-200',
-		black: 'bg-black',
+		white: 'bg-neutral-100',
+		black: 'bg-neutral-700',
 		coffee: 'bg-yellow-950',
 		sea: 'bg-teal-400',
 		space: 'bg-purple-800'
@@ -20,8 +20,8 @@
 	}
 </script>
 
-<a class="flex flex-col w-[20rem] h-[32rem] rounded-lg shadow bg-white text-black p-8" href={link}>
-	<img class="self-center h-2/3" alt="placeholder" src={variations[0].img} />
+<a class="flex flex-col p-8" href={link}>
+	<img class="self-center h-2/3" alt="display" src={variations[0].img} />
 	<div class="flex flex-col space-y-16">
 		<ul class="flex space-x-2 self-center h-fit">
 			{#each themes as theme}
