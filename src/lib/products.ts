@@ -60,7 +60,7 @@ const products: Product[] = [
   initProduct(
     '2',
     'dog',
-    10.99,
+    11.99,
     'tee2',
     ['S', 'M', 'L'],
     [
@@ -72,8 +72,47 @@ const products: Product[] = [
   initProduct(
     '3',
     'bird',
-    10.99,
+    13.99,
     'tee3',
+    ['S', 'M', 'L'],
+    [
+      { theme: 'white', img: '/img/placeholdertee.png' },
+      { theme: 'black', img: '/img/placeholdertee.png' },
+    ],
+    priceOverrides
+  ),
+
+  initProduct(
+    '4',
+    'bird',
+    10.99,
+    'tee4',
+    ['S', 'M', 'L'],
+    [
+      { theme: 'white', img: '/img/placeholdertee.png' },
+      { theme: 'black', img: '/img/placeholdertee.png' },
+    ],
+    priceOverrides
+  ),
+
+  initProduct(
+    '5',
+    'bird',
+    10.99,
+    'tee5',
+    ['S', 'M', 'L'],
+    [
+      { theme: 'white', img: '/img/placeholdertee.png' },
+      { theme: 'black', img: '/img/placeholdertee.png' },
+    ],
+    priceOverrides
+  ),
+
+  initProduct(
+    '6',
+    'sdeiuada',
+    105.99,
+    'tee6',
     ['S', 'M', 'L'],
     [
       { theme: 'white', img: '/img/placeholdertee.png' },
