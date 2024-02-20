@@ -3,15 +3,44 @@
 	import ProductCard from '$lib/ProductCard.svelte';
 </script>
 
-<div class="flex w-screen bg-white justify-center items-center">
-	<div class="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-20 p-10">
+<div class="flex flex-col w-screen">
+	<span class="px-32 mb-2 text-2xl text-black font-semibold">All Lines</span>
+	<div class="pl-32 mb-8 flex flex-nowrap space-x-12 overflow-auto py-2">
 		{#each products as product}
-			<ProductCard
-				link={`/store/${product.slug}`}
-				name={product.name}
-				price={product.price}
-				variations={product.variations}
-			/>
+			<div class="flex-none w-[24rem] rounded-[18px] shadow-lg bg-white text-black">
+				<ProductCard
+					link={`/store/${product.slug}`}
+					name={product.name}
+					price={product.price}
+					variations={product.variations}
+				/>
+			</div>
+		{/each}
+	</div>
+	<span class="px-32 mb-2 text-xl text-black mt-4 font-semibold">Duodles. Go in pairs.</span>
+	<div class="pl-32 mb-8 flex flex-nowrap space-x-6 overflow-auto py-2">
+		{#each products as product}
+			<div class="flex-none w-[18rem] rounded-[18px] shadow-lg bg-white text-black">
+				<ProductCard
+					link={`/store/${product.slug}`}
+					name={product.name}
+					price={product.price}
+					variations={product.variations}
+				/>
+			</div>
+		{/each}
+	</div>
+	<span class="px-32 mb-2 text-xl text-black mt-4 font-semibold">Collaborations</span>
+	<div class="pl-32 mb-8 flex flex-nowrap space-x-6 overflow-auto py-2">
+		{#each products as product}
+			<div class="flex-none w-[18rem] rounded-[18px] shadow-lg bg-white text-black">
+				<ProductCard
+					link={`/store/${product.slug}`}
+					name={product.name}
+					price={product.price}
+					variations={product.variations}
+				/>
+			</div>
 		{/each}
 	</div>
 </div>
