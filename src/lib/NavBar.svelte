@@ -1,45 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import routes from './routes';
-
-	let previousY = 0;
-	let offscreen = false;
-
-	// Function to handle scroll and determine if the navbar should go offscreen
-	function handleScroll() {
-		const currentY = window.scrollY;
-		const direction = previousY < currentY ? 'down' : 'up';
-		const threshold = 100; // You can adjust this threshold
-
-		offscreen = direction === 'down' && currentY > threshold;
-		previousY = currentY;
-	}
-
-	onMount(() => {
-		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
 </script>
 
 <div
-  class="navbar sticky top-0 flex flex-col pb-16 pt-4 text-black shadow justify-center items-center space-y-6 font-header backdrop-blur-sm {offscreen ? 'offscreen' : ''}"
+	class="sticky top-0 flex py-3 px-4 text-black shadow justify-center items-center font-header bg-white space-x-8"
 >
-	<h1 class="text-6xl">Dooble</h1>
-	<div class="flex space-x-10">
+	<span class="flex items-center text-sm space-x-8">
 		{#each routes as route}
 			<a href={route.href}>{route.label}</a>
 		{/each}
-	</div>
+		<a href="/cart">
+			<img
+				width="18"
+				height="18"
+				src="https://img.icons8.com/external-those-icons-lineal-those-icons/96/external-basket-camping-hiking-those-icons-lineal-those-icons.png"
+				alt="cart"
+			/>
+		</a>
+	</span>
 </div>
-
-<style>
-	.navbar {
-		transition: transform 0.3s ease-in-out;
-	}
-	.offscreen {
-		transform: translateY(-100%);
-	}
-</style>
